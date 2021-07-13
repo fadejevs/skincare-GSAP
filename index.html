@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Six+Caps&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="images/abstract-two.jpg" />
+    <title>Skincare</title>
+</head>
+<body>
+    <div class="waterbg"></div>
+    <div class="container">
+        <div class="title">
+            <div class="title-1">Care for your</div>
+            <div class="title-2">Skin and</div>
+            <div class="title-3">Wellbeing.</div>
+        </div>
+        <p>Treat your soul and yourself.</p>
+    </div>
+    <div class="cursor"></div>
+    <div class="img"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+    integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="hover.js"></script>
+    
+
+                <script>
+                    
+                    let textWrapper = document.querySelector('.title-1')
+                    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+                    let textWrapper2 = document.querySelector('.title-2')
+                     textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+                    let textWrapper3 = document.querySelector('.title-3')
+                     textWrapper3.innerHTML = textWrapper3.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+                                    
+
+                    let tl = gsap.timeline();
+                    tl.to ('.title-1 .letter', {opacity:1, y: '0', clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', stagger: '0.03'})
+                    tl.to ('.title-2 .letter', {opacity:1, y: '0', clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', stagger: '0.03'})
+                    tl.to ('.title-3 .letter', {opacity:1, y: '0', clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', stagger: '0.03'}, '-=.7')
+                    tl.from('p', {opacity: 0, y: '-50px'}, '-=.7')
+
+
+                    tl.to ('.img', {clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', ease:Back.easeOut.config(1.7), duration: .75}, "-=.5")
+
+
+
+
+
+
+
+
+
+                    
+                    var myAnimation = new hoverEffect ({
+                        parent: document.querySelector('.img'),
+                        intensity: 0.3,
+                        image1: 'images/abstract-one.jpg',
+                        image2: 'images/abstract-two.jpg',
+                        displacementImage: 'images/dis.jpg'
+                    }); 
+
+                    let title = document.querySelector('.container');
+                    let img = document.querySelector('.img');
+                    let cursorCircle = document.querySelector('.cursor');
+                    let cursor = { 
+                        x: 0,
+                        y:0
+                    }
+                    document.addEventListener('mousemove', (e) => {
+                        cursor.x = -e.clientX * .1;
+                        cursor.y = -e.clientY * .1;
+
+                        img.style.transform = `translate(${cursor.x}px, ${cursor.y}px)`
+
+                    })
+
+                    $(document).on('mousemove', (event) => {
+                            $('.cursor').css({
+                                left: event.clientX,
+                                top: event.clientY,
+                            });
+                        });
+
+                </script>
+    
+</body>
+</html>
