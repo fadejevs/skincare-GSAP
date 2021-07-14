@@ -13,13 +13,18 @@
 </head>
 <body>
     <div class="waterbg"></div>
+    <div class="waterbg-hover"></div>
+
     <div class="container">
         <div class="title">
             <div class="title-1">Care for your</div>
             <div class="title-2">Skin and</div>
             <div class="title-3">Wellbeing.</div>
         </div>
-        <p>Treat your soul and yourself.</p>
+        <div class="sub-headline">
+             <p>2021</p>
+             <p>Manchester</p>
+        </div>
     </div>
     <div class="cursor"></div>
     <div class="img"></div>
@@ -33,7 +38,7 @@
     
 
                 <script>
-                    
+
                     let textWrapper = document.querySelector('.title-1')
                     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
                     let textWrapper2 = document.querySelector('.title-2')
@@ -49,10 +54,10 @@
                     tl.from('p', {opacity: 0, y: '-50px'}, '-=.7')
 
 
-                    tl.to ('.img', {clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', ease:Back.easeOut.config(1.7), duration: 2}, "-=.5")
+                    tl.to ('.img', {clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', ease:Back.easeOut.config(1.7), duration: 1.5}, "-=.5")
 
 
-                    
+
 
 
 

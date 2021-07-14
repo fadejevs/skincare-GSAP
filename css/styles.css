@@ -18,14 +18,14 @@ body {
 body::before {
   content: "";
   position: absolute;
-  left: 12%;
+  left: 5%;
   border-left: 1px solid rgba(0, 0, 0, 0.2);
   height: 100vh;
   top: 0;
 }
 
 .container {
-  margin-left: -50%;
+  margin-left: -95%;
 }
 
 .title {
@@ -52,20 +52,23 @@ body::before {
   z-index: 2;
 }
 
-p {
+.sub-headline {
   font-family: "Playfair Display SC", "sans-serif";
-  font-size: 1.5rem;
-  margin-top: 2em;
+  font-size: 1rem;
+  margin-top: 4em;
 }
 
 .waterbg {
   position: absolute;
-  width: 35%;
-  height: 150vh;
+  width: 40%;
+  height: 140vh;
   z-index: -1;
   background: url(../images/girl.jpg);
   background-size: cover;
+  opacity: 40%;
   right: 0%;
+  -webkit-filter: saturate(0);
+          filter: saturate(0);
 }
 
 .img {
