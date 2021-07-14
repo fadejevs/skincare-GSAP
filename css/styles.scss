@@ -5,7 +5,7 @@
 }
 
 body {
-  background: rgb(211, 194, 171);
+  background: #ffeddc;
   display: grid;
   place-content: center;
   height: 100vh;
@@ -58,13 +58,13 @@ p {
 
 .waterbg {
   position: absolute;
-  width: 30%;
-  height: 100vh;
+  width: 35%;
+  height: 150vh;
   z-index: -1;
   background: url(../images/girl.jpg);
   background-size: cover;
-  mix-blend-mode: luminosity;
-  opacity: 12%;
+  // mix-blend-mode: luminosity;
+  // opacity: 40%;
   right: 0%;
 }
 
