@@ -59,14 +59,14 @@ body {
 .waterbg {
   position: absolute;
   width: 40%;
-  height: 120vh;
+  height: 150vh;
   z-index: -1;
   background: url(../images/girl.jpg);
   background-size: cover;
-  opacity: 60%;
   right: 0%;
   filter: saturate(0);
   animation: fadeIn 2s;
+  opacity: 70%;
 }
 
 @keyframes fadeIn {
@@ -74,7 +74,7 @@ body {
     opacity: 0;
   }
   to {
-    opacity: 60%;
+    opacity: 70%;
   }
 }
 

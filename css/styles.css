@@ -61,16 +61,16 @@ body::before {
 .waterbg {
   position: absolute;
   width: 40%;
-  height: 120vh;
+  height: 150vh;
   z-index: -1;
   background: url(../images/girl.jpg);
   background-size: cover;
-  opacity: 60%;
   right: 0%;
   -webkit-filter: saturate(0);
           filter: saturate(0);
   -webkit-animation: fadeIn 2s;
           animation: fadeIn 2s;
+  opacity: 70%;
 }
 
 @-webkit-keyframes fadeIn {
@@ -78,7 +78,7 @@ body::before {
     opacity: 0;
   }
   to {
-    opacity: 60%;
+    opacity: 70%;
   }
 }
 
@@ -87,7 +87,7 @@ body::before {
     opacity: 0;
   }
   to {
-    opacity: 60%;
+    opacity: 70%;
   }
 }
 
