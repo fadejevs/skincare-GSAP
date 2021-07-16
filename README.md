@@ -1,4 +1,4 @@
 https://codesandbox.io/s/skincare-gsap-ci15x
 
+![Group 56 (1)](https://user-images.githubusercontent.com/73697657/125911453-4e4ecf7b-764d-47a2-b24c-81998e903897.jpg)
 
-![Group 56](https://user-images.githubusercontent.com/73697657/125911263-1f5ed9a1-0407-4e84-b44e-fb0f4ea17d97.jpg)
